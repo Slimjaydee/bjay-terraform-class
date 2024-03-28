@@ -16,3 +16,27 @@
    16  su - sonar
    16  cd /opt/sonar8/bin/linux-x86-64/
    17 ./sonar.sh start, status, stop
+
+
+
+
+
+
+INSTALL SONAR SCANNER
+cd /downloads/sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip
+unzip sonar-scanner-cli-4.2.0.1873-linux.zip
+mv sonar-scanner-4.2.0.1873-linux /opt/sonar-scanner
+chown -R sonar:sonar /opt/sonar-scanner
+
+
+vi /opt/sonar-scanner/conf/sonar-scanner.properties , INSERT ALL OF THE BELOW LINES
+sonar.host.url=http://54.80.16.105:9000
+sonar.sourceEncoding=UTF-8
+sonar.login=616dba5aa8c22cf84780ae8bd03aeb031ba78822
+sonar.projectKey=codcommit
+sonar.projectName=codcommit
+sonar.sources=codcommit
+sonar.projectVersion=1.0
+sonar.gitlab.project_url=https://git-codecommit.us-east-1.amazonaws.com/v1/repos/aws-walmart-code
+sonar.gitlab.project_id=aws-walmart-code
