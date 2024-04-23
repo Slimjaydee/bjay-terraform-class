@@ -24,4 +24,25 @@
    22  vi ~/.bash_profile
    23  source ~/.bash_profile
    24  mvn -version
-  
+
+
+
+
+
+
+
+    1  amazon-linux-extras install java-openjdk11
+    2  sudo amazon-linux-extras install java-openjdk11
+    3  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+    4  sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+    5  sudo yum install jenkins -y
+    6  sudo systemctl status jenkins
+    7  sudo systemctl start jenkins
+    8  sudo systemctl status jenkins
+    9  cat /var/lib/jenkins/secrets/initialAdminPassword
+   10  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   11  sudo yum install java-1.8* -y
+   12  vi ~/.bash_profile
+   13  find /usr/lib/jvm/java-1.8* | head -n 3
+   14  vi ~/.bash_profile
+   15  source ~/.bash_profile
